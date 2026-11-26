@@ -59,7 +59,7 @@ export default function PoliciesRules() {
     <>
       {/* Hero */}
       <section className="no-reveal relative bg-white border-b border-border">
-        <div className="container-shell pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28">
+        <div className="container-shell pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-14">
           <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-end">
             <div>
               <p className="eyebrow mb-6 animate-fade-up">Library Conduct</p>
@@ -110,6 +110,28 @@ export default function PoliciesRules() {
                 <AlertCircle size={18} className="text-accent shrink-0 mt-0.5" />
                 <p className="text-xs text-text/75 leading-6">These rules are enforced to ensure a conducive learning environment for all library users.</p>
               </div>
+
+              <div className="mt-6 rounded-2xl bg-primary-dark text-white p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
+                    <ShieldAlert size={20} />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold leading-tight">Note to Library Users</h3>
+                </div>
+                <p className="text-white/75 leading-7 text-sm">
+                  Students who habitually break the rules will be punished accordingly.
+                </p>
+                <div className="mt-4 space-y-3">
+                  <div className="rounded-xl bg-white/[0.06] border border-white/10 px-4 py-3">
+                    <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">1st Offense</p>
+                    <p className="text-sm text-white/85">Reprimand</p>
+                  </div>
+                  <div className="rounded-xl bg-white/[0.06] border border-white/10 px-4 py-3">
+                    <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">2nd Offense</p>
+                    <p className="text-sm text-white/85">Suspension of library privileges for not more than two weeks</p>
+                  </div>
+                </div>
+              </div>
             </aside>
 
             {/* Rules */}
@@ -133,29 +155,7 @@ export default function PoliciesRules() {
                 ))}
               </div>
 
-              <div className="mt-8 rounded-2xl bg-primary-dark text-white p-7 sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
-                    <ShieldAlert size={22} />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-semibold">Note to Library Users</h3>
-                    <p className="mt-2 text-white/75 leading-7 text-sm sm:text-base">
-                      Students who habitually break the rules will be punished accordingly.
-                    </p>
-                    <div className="mt-5 grid sm:grid-cols-2 gap-3">
-                      <div className="rounded-xl bg-white/[0.06] border border-white/10 px-5 py-4">
-                        <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">1st Offense</p>
-                        <p className="text-sm text-white/85">Reprimand</p>
-                      </div>
-                      <div className="rounded-xl bg-white/[0.06] border border-white/10 px-5 py-4">
-                        <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">2nd Offense</p>
-                        <p className="text-sm text-white/85">Suspension of library privileges for not more than two weeks</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

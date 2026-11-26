@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
+  ArrowUpRight,
   BookMarked,
   BookOpen,
   Clock,
@@ -27,32 +28,52 @@ const categories = [
 
 const featuredBooks = [
   {
-    title: 'The Art of Quiet Reading',
-    author: 'Eleanor Whitmore',
-    category: 'Literature',
-    cover: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=80',
-    tag: 'Featured',
+    title: 'Bachelor of Science in Agriculture',
+    cover: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/163dh62icirL8OgKpMJEvOMWKvYEtR9kD?usp=sharing',
+    tag: 'New Books',
   },
   {
-    title: 'Research Methods in Practice',
-    author: 'Dr. Marcus Hale',
-    category: 'Academic',
-    cover: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=700&q=80',
-    tag: 'Popular',
+    title: 'Bachelor of Elementary Education',
+    cover: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/19bItM9aH7IMyze0UHo3gHI-d5Q5lgm5s?usp=sharing',
+    tag: 'New Books',
   },
   {
-    title: 'Designing the Future',
-    author: 'Ava Chen',
-    category: 'Technology',
-    cover: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80',
-    tag: 'New',
+    title: 'Bachelor of Science in Agricultural Biotechnology Engineering',
+    cover: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/17MTLzHfVtd9oucrCRBTvctUy3AL9mKae?usp=sharing',
+    tag: 'New Books',
   },
   {
-    title: 'Islands of Knowledge',
-    author: 'Samuel Reyes',
-    category: 'History',
-    cover: 'https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=700&q=80',
-    tag: 'Staff Pick',
+    title: 'Bachelor of Science in Criminology',
+    cover: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/1-bcTlKmI3F5w96HebBnjynE8Jsez97aR?usp=sharing',
+    tag: 'New Books',
+  },
+  {
+    title: 'Bachelor of Science in Forestry',
+    cover: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/1BtoCnBS6qSI3IQ1KX7OGcNCr216j56Ic?usp=sharing',
+    tag: 'New Books',
+  },
+  {
+    title: 'Bachelor of Science in Information Technology',
+    cover: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/12o8rkhzxcbGWikBDNBaLDj7BZEADMeqF?usp=sharing',
+    tag: 'New Books',
+  },
+  {
+    title: 'Bachelor of Technology and Livelihood Education',
+    cover: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/1oFsgDAnbuxaMciP9aPJxIoKCHnTdWUZp?usp=sharing',
+    tag: 'New Books',
+  },
+  {
+    title: 'General Education Curriculum (GEC)',
+    cover: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80',
+    href: 'https://drive.google.com/drive/folders/1FXDbKN4niq7tMmiWjpq8oZzwGc7cgl05?usp=sharing',
+    tag: 'New Books',
   },
 ]
 
@@ -112,27 +133,45 @@ const membershipPerks = [
 ]
 
 function BookCard({ book }) {
+  const Wrapper = book.href ? 'a' : 'article'
+  const wrapperProps = book.href ? { href: book.href, target: '_blank', rel: 'noreferrer' } : {}
+
   return (
-    <article className="group surface-card-hover overflow-hidden">
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#EAE7DF]">
+    <Wrapper {...wrapperProps} className="group block overflow-hidden rounded-2xl border border-border bg-white hover:border-secondary/25 hover:shadow-[0_20px_45px_-20px_rgba(35,78,62,0.18)] hover:-translate-y-1 transition-all duration-300">
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#EAE7DF]">
         <img
           src={book.cover}
           alt={`${book.title} cover`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           loading="lazy"
         />
-        <div className="absolute top-4 left-4">
-          <span className="inline-flex items-center rounded-full bg-white/95 backdrop-blur px-3 py-1 text-[11px] font-semibold tracking-wide uppercase text-primary shadow-sm">
-            {book.tag}
-          </span>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/35 via-transparent to-transparent opacity-70" />
+        {book.tag ? (
+          <div className="absolute top-2.5 left-2.5">
+            <span className="inline-flex items-center rounded-full bg-white/95 backdrop-blur px-2 py-0.5 text-[10px] font-semibold tracking-[0.12em] uppercase text-primary shadow-sm">
+              {book.tag}
+            </span>
+          </div>
+        ) : null}
+        {book.href ? (
+          <div className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur text-primary flex items-center justify-center shadow-sm opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+            <ArrowUpRight size={15} />
+          </div>
+        ) : null}
       </div>
-      <div className="p-5">
-        <p className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary mb-2">{book.category}</p>
-        <h3 className="font-display text-xl font-semibold text-text leading-snug">{book.title}</h3>
-        <p className="mt-1.5 text-sm text-muted">{book.author}</p>
+      <div className="p-3.5">
+        {book.category ? <p className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary mb-2">{book.category}</p> : null}
+        <h3 className="font-display text-sm sm:text-base font-semibold text-text leading-snug group-hover:text-primary transition-colors min-h-[2.75rem]">
+          {book.title}
+        </h3>
+        {book.author ? <p className="mt-1.5 text-sm text-muted">{book.author}</p> : null}
+        {book.href ? (
+          <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wide uppercase text-secondary">
+            View Resources <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+          </div>
+        ) : null}
       </div>
-    </article>
+    </Wrapper>
   )
 }
 
@@ -143,7 +182,7 @@ export default function Home() {
     e.preventDefault()
     const q = query.trim()
     const url = q
-      ? `https://nwssu.librarika.com/search/catalog?q=${encodeURIComponent(q)}`
+      ? `https://nwssu.librarika.com/search?q=${encodeURIComponent(q)}`
       : 'https://nwssu.librarika.com/'
     window.open(url, '_blank', 'noopener,noreferrer')
   }
@@ -196,21 +235,8 @@ export default function Home() {
                 Plan Your Visit
               </Link>
             </div>
-
-            <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg animate-fade-up" style={{ animationDelay: '320ms' }}>
-              {[
-                { value: '5,000+', label: 'Resources' },
-                { value: '6 Days', label: 'Open Access' },
-                { value: '100%', label: 'Community Focus' },
-              ].map((stat) => (
-                <div key={stat.label} className="border-l border-white/20 pl-4">
-                  <div className="font-display text-2xl sm:text-3xl font-semibold text-white">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-white/60 mt-1 tracking-wide">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
+            </div>
       </section>
 
       {/* SEARCH & DISCOVERY */}
@@ -247,7 +273,7 @@ export default function Home() {
                 type="button"
                 onClick={() => {
                   setQuery(term)
-                  window.open(`https://nwssu.librarika.com/search/catalog?q=${encodeURIComponent(term)}`, '_blank', 'noopener,noreferrer')
+                  window.open(`https://nwssu.librarika.com/search?q=${encodeURIComponent(term)}`, '_blank', 'noopener,noreferrer')
                 }}
                 className="px-4 py-1.5 rounded-full border border-border bg-white text-text/75 hover:border-secondary/40 hover:text-primary hover:bg-primary/[0.03]"
               >
@@ -261,22 +287,14 @@ export default function Home() {
       {/* FEATURED BOOKS */}
       <section className="section-padding bg-background">
         <div className="container-shell">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <SectionHeading
-              eyebrow="Featured Collection"
-              title="Books worth discovering"
-              description="A curated selection of titles chosen to inspire learning, spark curiosity, and support academic growth."
+              eyebrow="New Books Alert"
+              title="Newly added course resources"
+              description="Explore newly added books and learning materials by program. Click a course to view available resources."
             />
-            <a
-              href="https://nwssu.librarika.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-secondary shrink-0 group"
-            >
-              View full catalog <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </a>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {featuredBooks.map((book) => (
               <BookCard key={book.title} book={book} />
             ))}

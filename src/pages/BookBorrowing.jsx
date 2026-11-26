@@ -37,7 +37,7 @@ export default function BookBorrowing() {
       {/* Hero */}
       <section className="no-reveal relative overflow-hidden bg-white border-b border-border">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(35,78,62,0.03)_0%,transparent_45%,rgba(229,168,75,0.08)_100%)]" />
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <div className="grid lg:grid-cols-[1fr_320px] gap-10 items-end">
             <div>
               <p className="eyebrow mb-6 animate-fade-up">Library Services</p>

@@ -33,8 +33,8 @@ const aboutLinks = [
 
 const serviceLinks = [
   { to: '/book-borrowing', label: 'Book Borrowing & Returning', icon: BookOpen },
-  { href: 'https://nwssu.edu.ph/', label: 'Online Knowledge Concierge', icon: Headphones, external: true },
-  { to: '/digital-resources', label: 'Printing & Photocopying', icon: Printer },
+  { href: 'https://forms.gle/E1q3WjknTgdub1JdA', label: 'Library E-ASK', icon: Headphones, external: true },
+  { to: '/digital-resources', label: 'Scanning Service', icon: Printer },
 ]
 
 const resourceLinks = [
@@ -152,10 +152,10 @@ export default function Navbar() {
             />
             <div className="leading-tight">
               <div className="font-display text-lg lg:text-[1.35rem] font-semibold text-primary tracking-tight">
-                NWSSU-SJ Library
+                NWSSU-SJC Library
               </div>
               <div className="text-[11px] lg:text-xs tracking-[0.14em] uppercase text-muted font-medium">
-                San Jorge Campus
+                San Jorge, Samar
               </div>
             </div>
           </Link>

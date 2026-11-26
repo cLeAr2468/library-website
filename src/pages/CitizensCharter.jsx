@@ -38,7 +38,7 @@ export default function CitizensCharter() {
       <section className="no-reveal relative overflow-hidden bg-primary-dark text-white">
         <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px)', backgroundSize: '56px 56px' }} />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-accent/30" />
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <p className="eyebrow text-accent before:bg-accent/70 mb-6 animate-fade-up">Service Standards</p>
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
             <div>

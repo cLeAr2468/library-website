@@ -36,7 +36,7 @@ export default function Linkages() {
             <circle cx="300" cy="520" r="7" fill="#3B7157" />
           </svg>
         </div>
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <div className="max-w-2xl">
             <p className="eyebrow mb-6 animate-fade-up">Our Network</p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[0.95] text-primary-dark animate-fade-up" style={{ animationDelay: '80ms' }}>
@@ -59,6 +59,7 @@ export default function Linkages() {
             <p className="mt-4 text-muted leading-8">We build meaningful partnerships to broaden resources and opportunities for our students and faculty.</p>
           </div>
 
+          {/*
           <div className="space-y-4">
             {linkages.map((item, index) => {
               const Icon = item.icon
@@ -77,6 +78,12 @@ export default function Linkages() {
                 </article>
               )
             })}
+          </div>
+          */}
+
+          <div className="bg-white border border-border rounded-2xl p-12 sm:p-16 text-center">
+            <p className="font-display text-3xl sm:text-4xl font-semibold text-primary-dark">Coming Soon</p>
+            <p className="mt-3 text-muted">Collaboration details will be available soon.</p>
           </div>
 
           <div className="mt-12 rounded-[2rem] bg-primary text-white p-8 sm:p-10 lg:p-12 flex flex-col lg:flex-row lg:items-center gap-8 justify-between relative overflow-hidden">

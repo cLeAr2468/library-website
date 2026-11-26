@@ -25,7 +25,7 @@ export default function Repository() {
       <section className="no-reveal relative overflow-hidden bg-white border-b border-border">
         <div className="absolute -right-24 -top-24 w-[28rem] h-[28rem] rounded-full border border-primary/[0.07]" />
         <div className="absolute -right-8 -top-8 w-[18rem] h-[18rem] rounded-full border border-primary/[0.07]" />
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <div className="grid lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 items-center">
             <div className="max-w-3xl">
               <p className="eyebrow mb-6 animate-fade-up">Online Resources</p>

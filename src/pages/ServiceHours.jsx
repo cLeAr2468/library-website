@@ -39,7 +39,7 @@ export default function ServiceHours() {
       {/* Hero */}
       <section className="no-reveal relative overflow-hidden bg-primary-dark text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(229,168,75,0.22),transparent_28%),radial-gradient(circle_at_85%_70%,rgba(59,113,87,0.35),transparent_35%)]" />
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-end">
             <div>
               <p className="eyebrow text-accent before:bg-accent/70 mb-6 animate-fade-up">Plan Your Visit</p>

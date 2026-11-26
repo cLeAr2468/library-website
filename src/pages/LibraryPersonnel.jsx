@@ -2,29 +2,29 @@ import { Mail, User } from 'lucide-react'
 
 const personnel = [
   {
-    name: 'Esterlyn C. Platino',
-    role: 'Head, Learning Resource Center',
-    image: '/images/personnel/head.jpg',
-    description: 'Oversees library operations, services, collections, and strategic development.',
+    name: 'Esterlyn C. Platino, RL, MLIS',
+    role: 'Campus Librarian',
+    image: '/images/personnel/esterlyn-platino.jpg',
+    description: 'Leads library services, collections, and programs that support learning and research at the campus.',
     lead: true,
   },
   {
-    name: 'Librarian',
-    role: 'Technical Services Librarian',
-    image: '/images/personnel/librarian-1.jpg',
-    description: 'Manages cataloging, acquisitions, and organization of library resources.',
+    name: 'Lyne Viannie L. Sinajonon, RL',
+    role: 'School Librarian',
+    image: '/images/personnel/lyne-sinajonon.jpg',
+    description: 'Supports library operations and assists students and faculty with library resources and services.',
   },
   {
-    name: 'Librarian',
-    role: 'Reader Services Librarian',
-    image: '/images/personnel/librarian-2.jpg',
-    description: 'Assists users with borrowing, reference inquiries, and research support.',
+    name: 'Jeff V. Tupaz, LPT',
+    role: 'Library Support Staff',
+    image: '/images/personnel/jeff-tupaz.jpg',
+    description: 'Provides support in daily library activities and assists users with their library needs.',
   },
   {
-    name: 'Library Staff',
-    role: 'Library Assistant',
-    image: '/images/personnel/staff.jpg',
-    description: 'Supports daily library operations, circulation, and user assistance.',
+    name: 'Darylle B. Polbos, LPT',
+    role: 'Library Support Staff',
+    image: '/images/personnel/darylle-polbos.jpg',
+    description: 'Assists in maintaining library services and supporting students and faculty in the Learning Resource Center.',
   },
 ]
 
@@ -59,7 +59,7 @@ export default function LibraryPersonnel() {
       {/* Hero */}
       <section className="no-reveal relative overflow-hidden bg-background">
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] -translate-y-1/3 translate-x-1/4 rounded-full bg-primary/[0.04]" />
-        <div className="relative container-shell pt-20 pb-16 sm:pt-24 lg:pt-28">
+        <div className="relative container-shell pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-14 lg:pb-12">
           <div className="grid lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 items-center">
             <div>
               <p className="eyebrow mb-6 animate-fade-up">Our People</p>

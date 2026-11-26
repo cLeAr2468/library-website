@@ -75,7 +75,7 @@ export default function MissionVision() {
       <section className="no-reveal relative overflow-hidden bg-[#F3EFE6] text-text">
         <div className="absolute inset-0 opacity-[0.45]" style={{ backgroundImage: 'linear-gradient(90deg, rgba(35,78,62,0.05) 1px, transparent 1px), linear-gradient(rgba(35,78,62,0.05) 1px, transparent 1px)', backgroundSize: '44px 44px' }} />
         <div className="absolute -top-24 right-0 w-[32rem] h-[32rem] rounded-full bg-accent/15 blur-3xl" />
-        <div className="relative container-shell pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24">
+        <div className="relative container-shell pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-14 lg:pb-12">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-end">
             <div>
               <p className="eyebrow mb-6 animate-fade-up">About the Institution</p>

@@ -1,20 +1,23 @@
-import { ArrowUpRight, Database as DatabaseIcon, Lock, Search } from 'lucide-react'
+import { ArrowUpRight, Database as DatabaseIcon, Search } from 'lucide-react'
 
-const databases = [
+const databaseSections = [
   {
-    title: 'Online Journals',
-    description: 'Access scholarly journals and articles for academic research and coursework.',
-    access: 'Available through library-supported platforms.',
+    title: 'Subscribed Databases',
+    items: [
+      { title: 'PROQUEST', url: 'https://www.proquest.com/' },
+      { title: 'Philippine E-Journals (PEJ)', url: 'https://ejournals.ph/' },
+    ],
   },
   {
-    title: 'E-Books & References',
-    description: 'Digital books and reference materials to support learning across disciplines.',
-    access: 'Accessible on campus or as provided by subscription.',
-  },
-  {
-    title: 'Institutional Resources',
-    description: 'Curated academic resources selected by NWSSU-SJ Library to support programs and research.',
-    access: 'Contact library staff for access details.',
+    title: 'Open Access Database for Ebooks & Ejournals',
+    items: [
+      { title: 'DOST-STARBOOKS', url: 'https://starbooks.ph/' },
+      { title: 'NLP E-Resources Portal', url: 'https://eportal.nlp.gov.ph/' },
+      { title: 'PCAARRD eLibrary', url: 'https://elibrary.pcaarrd.dost.gov.ph/home' },
+      { title: 'DOAB', url: 'https://directory.doabooks.org/' },
+      { title: 'Taylor & Francis', url: 'https://www.taylorfrancis.com/' },
+      { title: 'Springer Nature', url: 'https://link.springer.com/' },
+    ],
   },
 ]
 
@@ -24,7 +27,7 @@ export default function Database() {
       {/* Hero */}
       <section className="no-reveal relative overflow-hidden bg-[#F3EFE6]">
         <div className="absolute inset-0 opacity-[0.35]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(35,78,62,0.12) 1px, transparent 0)', backgroundSize: '24px 24px' }} />
-        <div className="relative container-shell py-20 sm:py-24 lg:py-28">
+        <div className="relative container-shell py-8 sm:py-10 lg:py-14">
           <div className="grid lg:grid-cols-[1fr_400px] gap-10 lg:gap-14 items-center">
             <div className="max-w-3xl">
               <p className="eyebrow mb-6 animate-fade-up">Online Resources</p>
@@ -79,23 +82,32 @@ export default function Database() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              {databases.map((item, index) => (
-                <article key={item.title} className="bg-white border border-border rounded-2xl p-7 sm:p-8 flex flex-col sm:flex-row gap-5 sm:gap-7 hover:border-secondary/25 transition-colors">
-                  <div className="flex items-center sm:items-start gap-4 sm:flex-col sm:w-16 shrink-0">
-                    <span className="font-display text-2xl text-primary/20">{String(index + 1).padStart(2, '0')}</span>
-                    <div className="w-11 h-11 rounded-xl bg-primary/[0.06] text-primary flex items-center justify-center">
-                      <DatabaseIcon size={21} strokeWidth={1.75} />
-                    </div>
+            <div className="space-y-8">
+              {databaseSections.map((section) => (
+                <div key={section.title}>
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-text mb-4">{section.title}</h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {section.items.map((item, index) => (
+                      <article key={item.title} className="bg-white border border-border rounded-xl p-5 hover:border-secondary/25 transition-colors">
+                        <div className="flex items-start gap-3">
+                          <span className="font-display text-lg text-primary/20 pt-0.5 shrink-0">{String(index + 1).padStart(2, '0')}</span>
+                          <div className="min-w-0 flex-1">
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="group inline-flex items-start gap-1.5 font-display text-lg font-semibold text-text hover:text-primary transition-colors leading-snug"
+                            >
+                              <span className="break-words">{item.title}</span>
+                              <ArrowUpRight size={16} className="shrink-0 mt-0.5 text-primary/50 group-hover:text-primary transition-colors" />
+                            </a>
+                            <p className="mt-1.5 text-xs text-muted truncate" title={item.url}>{item.url}</p>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-display text-2xl font-semibold text-text">{item.title}</h3>
-                    <p className="mt-3 text-muted leading-7">{item.description}</p>
-                    <p className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-secondary bg-secondary/[0.07] px-3 py-2 rounded-full">
-                      <Lock size={13} /> {item.access}
-                    </p>
-                  </div>
-                </article>
+                </div>
               ))}
             </div>
           </div>
