@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+  <rect width="900" height="700" fill="#F8F7F2"/>
+  <circle cx="730" cy="150" r="160" fill="#E5A84B" fill-opacity="0.12"/>
+  <circle cx="170" cy="560" r="170" fill="#234E3E" fill-opacity="0.05"/>
+  <!-- archive box -->
+  <g transform="translate(250,260)">
+    <rect x="0" y="50" width="400" height="260" rx="24" fill="#234E3E"/>
+    <rect x="0" y="0" width="400" height="90" rx="20" fill="#3B7157"/>
+    <rect x="155" y="30" width="90" height="28" rx="14" fill="#F3D49B"/>
+    <rect x="40" y="130" width="320" height="10" rx="5" fill="#F8F7F2" fill-opacity="0.08"/>
+    <rect x="40" y="260" width="320" height="10" rx="5" fill="#F8F7F2" fill-opacity="0.08"/>
+  </g>
+  <!-- papers -->
+  <g transform="translate(170,150)">
+    <rect x="24" y="24" width="150" height="200" rx="12" fill="#E5A84B" fill-opacity="0.25"/>
+    <rect x="12" y="12" width="150" height="200" rx="12" fill="#F3D49B" fill-opacity="0.45"/>
+    <rect x="0" y="0" width="150" height="200" rx="12" fill="#FFFFFF" stroke="#234E3E" stroke-opacity="0.08"/>
+    <path d="M28 42h94M28 66h94M28 90h70M28 114h94M28 138h60" stroke="#234E3E" stroke-opacity="0.16" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(560,150)">
+    <rect x="0" y="0" width="160" height="210" rx="12" fill="#FFFFFF" stroke="#234E3E" stroke-opacity="0.08"/>
+    <rect x="0" y="0" width="160" height="44" rx="12" fill="#234E3E" fill-opacity="0.06"/>
+    <path d="M28 75h104M28 99h104M28 123h78M28 147h104" stroke="#234E3E" stroke-opacity="0.16" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="80" cy="178" r="16" fill="#E5A84B" fill-opacity="0.3"/>
+  </g>
+  <!-- tag -->
+  <g transform="translate(640,420)">
+    <rect x="0" y="0" width="120" height="54" rx="27" fill="#E5A84B"/>
+    <path d="M30 27h60" stroke="#18362B" stroke-opacity="0.3" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

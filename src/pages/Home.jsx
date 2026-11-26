@@ -154,12 +154,12 @@ export default function Home() {
       <section className="no-reveal relative overflow-hidden bg-primary-dark text-white min-h-[92vh] flex items-center -mt-[76px] lg:-mt-[88px]">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1800&q=80"
+            src="/illustrations/hero-library.svg"
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#18362B]/95 via-[#234E3E]/85 to-[#234E3E]/45" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#18362B]/60 via-transparent to-[#18362B]/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#18362B]/90 via-[#234E3E]/75 to-[#234E3E]/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#18362B]/55 via-transparent to-[#18362B]/20" />
         </div>
 
         <div className="relative container-shell pb-24 pt-32 lg:pb-28 lg:pt-40">

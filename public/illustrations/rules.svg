@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+  <rect width="900" height="700" fill="#F3EFE6"/>
+  <circle cx="720" cy="540" r="170" fill="#234E3E" fill-opacity="0.05"/>
+  <circle cx="180" cy="150" r="140" fill="#E5A84B" fill-opacity="0.12"/>
+  <!-- clipboard -->
+  <g transform="translate(280,110)">
+    <rect x="30" y="30" width="320" height="450" rx="28" fill="#FFFFFF" stroke="#234E3E" stroke-opacity="0.08"/>
+    <rect x="130" y="0" width="120" height="56" rx="28" fill="#234E3E"/>
+    <rect x="155" y="16" width="70" height="24" rx="12" fill="#F3D49B"/>
+    <!-- rules lines -->
+    <g stroke-linecap="round">
+      <circle cx="85" cy="130" r="18" fill="#3B7157" fill-opacity="0.15"/>
+      <path d="M78 130l5 5 10-12" stroke="#3B7157" stroke-width="4"/>
+      <path d="M120 122h150M120 140h110" stroke="#234E3E" stroke-opacity="0.18" stroke-width="6"/>
+
+      <circle cx="85" cy="200" r="18" fill="#3B7157" fill-opacity="0.15"/>
+      <path d="M78 200l5 5 10-12" stroke="#3B7157" stroke-width="4"/>
+      <path d="M120 192h160M120 210h120" stroke="#234E3E" stroke-opacity="0.18" stroke-width="6"/>
+
+      <circle cx="85" cy="270" r="18" fill="#3B7157" fill-opacity="0.15"/>
+      <path d="M78 270l5 5 10-12" stroke="#3B7157" stroke-width="4"/>
+      <path d="M120 262h140M120 280h130" stroke="#234E3E" stroke-opacity="0.18" stroke-width="6"/>
+
+      <circle cx="85" cy="340" r="18" fill="#E5A84B" fill-opacity="0.2"/>
+      <path d="M78 340l5 5 10-12" stroke="#E5A84B" stroke-width="4"/>
+      <path d="M120 332h155M120 350h100" stroke="#234E3E" stroke-opacity="0.18" stroke-width="6"/>
+
+      <circle cx="85" cy="410" r="18" fill="#E5A84B" fill-opacity="0.2"/>
+      <path d="M78 410l5 5 10-12" stroke="#E5A84B" stroke-width="4"/>
+      <path d="M120 402h145M120 420h115" stroke="#234E3E" stroke-opacity="0.18" stroke-width="6"/>
+    </g>
+  </g>
+  <!-- shield -->
+  <g transform="translate(620,360)">
+    <path d="M90 0l90 34v100c0 70-48 120-90 140-42-20-90-70-90-140V34L90 0z" fill="#234E3E"/>
+    <path d="M90 24l66 25v76c0 52-35 90-66 106-31-16-66-54-66-106V49l66-25z" fill="#3B7157" fill-opacity="0.55"/>
+    <path d="M64 136l20 20 36-42" stroke="#E5A84B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

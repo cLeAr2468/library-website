@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+  <rect width="900" height="700" fill="#F3EFE6"/>
+  <circle cx="720" cy="170" r="150" fill="#234E3E" fill-opacity="0.05"/>
+  <circle cx="170" cy="560" r="150" fill="#E5A84B" fill-opacity="0.1"/>
+  <!-- calendar -->
+  <g transform="translate(170,150)">
+    <rect x="0" y="40" width="340" height="360" rx="28" fill="#FFFFFF" stroke="#234E3E" stroke-opacity="0.08"/>
+    <rect x="0" y="40" width="340" height="90" rx="28" fill="#234E3E"/>
+    <rect x="0" y="100" width="340" height="30" fill="#234E3E"/>
+    <rect x="70" y="10" width="20" height="60" rx="10" fill="#E5A84B"/>
+    <rect x="250" y="10" width="20" height="60" rx="10" fill="#E5A84B"/>
+    <text x="170" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#F8F7F2" font-weight="700">Schedule</text>
+    <g fill="#234E3E" font-family="Arial,sans-serif" font-size="20" text-anchor="middle" opacity="0.35">
+      <text x="55" y="175">M</text><text x="112" y="175">T</text><text x="170" y="175">W</text><text x="227" y="175">T</text><text x="285" y="175">F</text>
+    </g>
+    <g fill="#234E3E" fill-opacity="0.18">
+      <circle cx="55" cy="215" r="22"/><circle cx="112" cy="215" r="22"/><circle cx="170" cy="215" r="22"/><circle cx="227" cy="215" r="22"/><circle cx="285" cy="215" r="22"/>
+      <circle cx="55" cy="275" r="22"/><circle cx="112" cy="275" r="22"/><circle cx="170" cy="275" r="22"/><circle cx="227" cy="275" r="22"/><circle cx="285" cy="275" r="22"/>
+    </g>
+    <g fill="#3B7157" fill-opacity="0.25">
+      <circle cx="55" cy="335" r="22"/><circle cx="112" cy="335" r="22"/><circle cx="170" cy="335" r="22"/><circle cx="227" cy="335" r="22"/><circle cx="285" cy="335" r="22"/>
+    </g>
+    <circle cx="170" cy="275" r="22" fill="#E5A84B" fill-opacity="0.9"/>
+  </g>
+  <!-- clock -->
+  <g transform="translate(560,250)">
+    <circle cx="120" cy="120" r="120" fill="#FFFFFF" stroke="#234E3E" stroke-opacity="0.08" stroke-width="8"/>
+    <circle cx="120" cy="120" r="100" fill="#F8F7F2"/>
+    <circle cx="120" cy="120" r="8" fill="#234E3E"/>
+    <path d="M120 120V55" stroke="#234E3E" stroke-width="8" stroke-linecap="round"/>
+    <path d="M120 120l45 30" stroke="#E5A84B" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#234E3E" fill-opacity="0.25">
+      <circle cx="120" cy="32" r="5"/><circle cx="120" cy="208" r="5"/><circle cx="32" cy="120" r="5"/><circle cx="208" cy="120" r="5"/>
+    </g>
+  </g>
+</svg>

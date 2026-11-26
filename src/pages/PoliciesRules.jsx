@@ -1,6 +1,4 @@
 import { AlertCircle, Ban, BookX, IdCard, ShieldAlert, Volume2 } from 'lucide-react'
-import PageHero from '../components/PageHero'
-import SectionHeading from '../components/SectionHeading'
 
 const generalRules = [
   {
@@ -59,83 +57,105 @@ const quickReminders = [
 export default function PoliciesRules() {
   return (
     <>
-      <PageHero
-        eyebrow="About Us"
-        title="Library Rules & Regulations"
-        description="Guidelines designed to maintain a respectful, safe, and productive learning environment for the entire NWSSU-SJ community."
-      />
+      {/* Hero */}
+      <section className="no-reveal relative bg-white border-b border-border">
+        <div className="container-shell pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28">
+          <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-end">
+            <div>
+              <p className="eyebrow mb-6 animate-fade-up">Library Conduct</p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-primary-dark animate-fade-up" style={{ animationDelay: '80ms' }}>
+                Rules &amp; Regulations
+              </h1>
+              <p className="mt-6 max-w-2xl text-muted leading-8 text-base sm:text-lg animate-fade-up" style={{ animationDelay: '160ms' }}>
+                Guidelines designed to maintain a respectful, safe, and productive learning environment for the entire NWSSU-SJ community.
+              </p>
+            </div>
+            <div className="animate-fade-up lg:pb-1" style={{ animationDelay: '240ms' }}>
+              <div className="relative rounded-2xl overflow-hidden mb-4 hidden lg:block bg-[#F3EFE6] border border-border/60">
+                <img
+                  src="/illustrations/rules.svg"
+                  alt="Illustration of library rules and guidelines"
+                  className="w-full h-44 object-contain p-3"
+                />
+              </div>
+              <div className="p-5 rounded-2xl bg-background border border-border">
+                <p className="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Policy basis</p>
+                <p className="text-sm text-muted leading-7">
+                  The Code of Discipline in the Academic Manual and Students' Handbook shall be enforced inside the library, together with the rules below.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding bg-background">
         <div className="container-shell">
-          <SectionHeading
-            align="center"
-            eyebrow="General Rules"
-            title="A shared space, shared responsibility"
-            description="The Code of Discipline in the Academic Manual and Students' Handbook shall be enforced inside the library. In addition, the following specific rules shall be applicable."
-          />
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14">
+            {/* Sidebar */}
+            <aside className="lg:sticky lg:top-28 self-start">
+              <p className="text-xs font-bold tracking-[0.2em] uppercase text-muted mb-4">Quick reminders</p>
+              <div className="space-y-3">
+                {quickReminders.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={item.label} className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border">
+                      <Icon size={18} className="text-primary shrink-0" strokeWidth={1.75} />
+                      <span className="text-sm font-medium text-text leading-snug">{item.label}</span>
+                    </div>
+                  )
+                })}
+              </div>
+              <div className="mt-6 p-4 rounded-xl bg-accent/10 border border-accent/20 flex gap-3">
+                <AlertCircle size={18} className="text-accent shrink-0 mt-0.5" />
+                <p className="text-xs text-text/75 leading-6">These rules are enforced to ensure a conducive learning environment for all library users.</p>
+              </div>
+            </aside>
 
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {quickReminders.map((item) => {
-              const Icon = item.icon
-              return (
-                <div key={item.label} className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-border">
-                  <div className="w-10 h-10 rounded-xl bg-primary/[0.07] text-primary flex items-center justify-center shrink-0">
-                    <Icon size={19} strokeWidth={1.75} />
+            {/* Rules */}
+            <div>
+              <div className="mb-8">
+                <p className="eyebrow mb-3">General Rules</p>
+                <h2 className="font-display text-3xl sm:text-4xl font-semibold text-text leading-tight">A shared space, shared responsibility.</h2>
+              </div>
+
+              <div className="bg-white border border-border rounded-2xl overflow-hidden">
+                {generalRules.map((rule, index) => (
+                  <div key={rule.title} className={`px-6 sm:px-8 py-6 sm:py-7 flex gap-5 ${index !== 0 ? 'border-t border-border' : ''}`}>
+                    <div className="font-display text-lg text-primary/35 w-7 shrink-0 pt-0.5">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-text text-base sm:text-[1.05rem] leading-snug">{rule.title}</h3>
+                      <p className="mt-2 text-sm text-muted leading-7">{rule.text}</p>
+                    </div>
                   </div>
-                  <span className="text-sm font-medium text-text leading-snug">{item.label}</span>
-                </div>
-              )
-            })}
-          </div>
+                ))}
+              </div>
 
-          <div className="mt-10 surface-card overflow-hidden">
-            <div className="px-6 sm:px-8 py-5 border-b border-border bg-primary/[0.02]">
-              <h2 className="font-display text-xl sm:text-2xl font-semibold text-text">General Library Rules</h2>
-              <p className="text-sm text-muted mt-1">Please read and observe the following rules when using the library.</p>
-            </div>
-            <div className="divide-y divide-border">
-              {generalRules.map((rule, index) => (
-                <div key={rule.title} className="px-6 sm:px-8 py-6 flex gap-4 sm:gap-5 hover:bg-background/40 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-display font-semibold shrink-0 mt-0.5">
-                    {index + 1}
+              <div className="mt-8 rounded-2xl bg-primary-dark text-white p-7 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
+                    <ShieldAlert size={22} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-text text-base sm:text-[1.05rem]">{rule.title}</h3>
-                    <p className="mt-2 text-sm text-muted leading-7">{rule.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 grid md:grid-cols-[1fr_auto] gap-6">
-            <div className="rounded-2xl bg-accent/10 border border-accent/20 p-6 sm:p-7 flex gap-4">
-              <div className="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center shrink-0">
-                <ShieldAlert size={22} />
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-semibold text-text">Note to Library Users</h3>
-                <p className="mt-2 text-sm text-text/80 leading-7">
-                  Students who habitually break the rules will be punished accordingly.
-                </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-accent/25 text-sm">
-                    <span className="font-semibold text-primary">1st Offense:</span>
-                    <span className="text-muted">Reprimand</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-accent/25 text-sm">
-                    <span className="font-semibold text-primary">2nd Offense:</span>
-                    <span className="text-muted">Suspension of library privileges for not more than two weeks</span>
+                    <h3 className="font-display text-2xl font-semibold">Note to Library Users</h3>
+                    <p className="mt-2 text-white/75 leading-7 text-sm sm:text-base">
+                      Students who habitually break the rules will be punished accordingly.
+                    </p>
+                    <div className="mt-5 grid sm:grid-cols-2 gap-3">
+                      <div className="rounded-xl bg-white/[0.06] border border-white/10 px-5 py-4">
+                        <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">1st Offense</p>
+                        <p className="text-sm text-white/85">Reprimand</p>
+                      </div>
+                      <div className="rounded-xl bg-white/[0.06] border border-white/10 px-5 py-4">
+                        <p className="text-accent text-xs font-bold tracking-[0.16em] uppercase mb-1">2nd Offense</p>
+                        <p className="text-sm text-white/85">Suspension of library privileges for not more than two weeks</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="rounded-2xl bg-white border border-border p-6 sm:p-7 flex gap-4 md:max-w-xs">
-              <AlertCircle size={20} className="text-secondary shrink-0 mt-0.5" />
-              <p className="text-sm text-muted leading-7">
-                These rules are enforced to ensure a conducive learning environment for all library users.
-              </p>
             </div>
           </div>
         </div>
