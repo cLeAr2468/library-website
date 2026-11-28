@@ -1,22 +1,22 @@
-import { Archive, ArrowUpRight, FileText, GraduationCap, Search } from 'lucide-react'
+import { ArrowUpRight, Clock, Search } from 'lucide-react'
 
-const collections = [
-  {
-    icon: GraduationCap,
-    title: 'Theses & Dissertations',
-    description: 'Academic works produced by NWSSU-SJ students and graduate researchers.',
-  },
-  {
-    icon: FileText,
-    title: 'Capstone Projects',
-    description: 'Student projects showcasing applied research and practical solutions.',
-  },
-  {
-    icon: Archive,
-    title: 'Institutional Research',
-    description: 'Research outputs and publications from the NWSSU academic community.',
-  },
-]
+// const collections = [
+//   {
+//     icon: GraduationCap,
+//     title: 'Theses & Dissertations',
+//     description: 'Academic works produced by NWSSU-SJ students and graduate researchers.',
+//   },
+//   {
+//     icon: FileText,
+//     title: 'Capstone Projects',
+//     description: 'Student projects showcasing applied research and practical solutions.',
+//   },
+//   {
+//     icon: Archive,
+//     title: 'Institutional Research',
+//     description: 'Research outputs and publications from the NWSSU academic community.',
+//   },
+// ]
 
 export default function Repository() {
   return (
@@ -85,7 +85,17 @@ export default function Repository() {
             </div>
 
             <div className="space-y-0 border border-border rounded-2xl overflow-hidden bg-white">
-              {collections.map((item, index) => {
+              <div className="flex min-h-[320px] flex-col items-center justify-center p-8 sm:p-10 text-center">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary">
+                  <Clock size={26} strokeWidth={1.75} />
+                </div>
+                <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-secondary mb-2">Repository Files</p>
+                <h3 className="font-display text-3xl font-semibold text-text">Coming Soon</h3>
+                <p className="mt-3 max-w-sm text-sm text-muted leading-7">
+                  Repository collections and files are being prepared. Please check back soon or contact the Learning Resource Center for assistance.
+                </p>
+              </div>
+              {/* {collections.map((item, index) => {
                 const Icon = item.icon
                 return (
                   <article key={item.title} className={`p-7 sm:p-8 flex gap-5 ${index !== 0 ? 'border-t border-border' : ''}`}>
@@ -99,7 +109,7 @@ export default function Repository() {
                     </div>
                   </article>
                 )
-              })}
+              })} */}
             </div>
           </div>
         </div>
