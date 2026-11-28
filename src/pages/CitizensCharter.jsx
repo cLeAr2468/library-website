@@ -56,7 +56,6 @@ export default function CitizensCharter() {
             <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/[0.06] text-primary">
               <Clock size={26} strokeWidth={1.75} />
             </div>
-            <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-secondary mb-2">LRC Service Charter</p>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold text-text">Coming Soon</h2>
             <p className="mt-3 text-sm sm:text-base text-muted leading-7">
               The Citizen&apos;s Charter is being prepared and will be available here soon. Please check back later for updates on library service standards and procedures.
